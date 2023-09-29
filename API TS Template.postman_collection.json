@@ -1,0 +1,68 @@
+{
+  "info": {
+    "_postman_id": "6fd0af0b-f9c5-4049-a1bc-11d0db754f30",
+    "name": "API TS Template",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{endpoint}}/v1/status",
+          "host": ["{{endpoint}}"],
+          "path": ["v1", "status"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create example",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"{{$randomEmail}}\",\n    \"name\": \"{{$randomFirstName}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{endpoint}}/example/v1/create",
+          "host": ["{{endpoint}}"],
+          "path": ["example", "v1", "create"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{endpoint}}/example/v1/search?name=&email",
+          "host": ["{{endpoint}}"],
+          "path": ["example", "v1", "search"],
+          "query": [
+            {
+              "key": "name",
+              "value": ""
+            },
+            {
+              "key": "email",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}

@@ -1,0 +1,12 @@
+[template]
+src = ".env.tpl"
+dest = ".env"
+keys = [
+  "/observability/jaeger_endpoint",
+
+  "/mongo/uri",
+  "/mongo/database",
+  "/mongo/prefix",
+
+  "/logging/queue_url"
+]
